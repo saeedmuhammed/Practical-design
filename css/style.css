@@ -1,3 +1,87 @@
-body{
+:root {
+    --main-color: orangered;
+}
+
+body {
     font-family: 'Open Sans', sans-serif;
 }
+
+/* Start landing page */
+.land-page {
+    min-height: 100vh;
+    background-image: url(../images/01.jpg);
+    background-size: cover;
+    position: relative;
+    color: white;
+}
+
+.land-page .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #0000005e;
+    z-index: 1;
+}
+
+.land-page .header {
+    position: relative;
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    z-index: 2;
+}
+
+.land-page .header .logo {
+    width: 250px;
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.land-page .header .links {
+    list-style: none;
+    margin-right: 50px;
+
+}
+
+.land-page .header .links li {
+    display: inline-block;
+    margin-left: 30px;
+    font-size: 20px;
+
+}
+
+.land-page .header .links li a {
+    text-decoration: none;
+    color: white;
+}
+
+.land-page .header .links li a:hover,
+.land-page .header .links li a.active {
+    color: var(--main-color);
+}
+
+.land-page .body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.land-page .body p {
+    font-size: 23px;
+}
+
+.land-page .body h1 {
+    font-size: 50px;
+}
+
+.land-page .body h1 span {
+    color: var(--main-color);
+}
+
+/* end landing page */
