@@ -4,8 +4,18 @@ gear.addEventListener("click",()=>{
 document.querySelector(".settings").classList.toggle("toggle");
 document.querySelector(".settings .icon i").classList.toggle("togglei");
 });
+//change to color of whole webstie from settings menu
+let colors = document.querySelectorAll(".settings .body ul li");
 
+colors.forEach((element)=>{
 
+element.addEventListener("click",(e)=>{
+
+document.documentElement.style.setProperty("--main-color",e.target.dataset.color);
+
+});
+
+});
 
 
 

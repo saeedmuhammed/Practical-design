@@ -66,8 +66,20 @@ padding: 0;
     background-color: green;
     display: inline-block;
     margin-left: 8px;
+    cursor: pointer;
 }
-
+.settings .body ul li:first-child{
+    background-color: orangered;
+}
+.settings .body ul li:nth-child(2){
+    background-color: darkgreen;
+}
+.settings .body ul li:nth-child(3){
+    background-color:darkblue ;
+}
+.settings .body ul li:nth-child(4){
+    background-color: slateblue;
+}
 
 /* end website settings */
 
