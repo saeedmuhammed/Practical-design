@@ -44,13 +44,14 @@ body {
 
 .settings .body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 .settings .body h4{
 text-align: center;
 font-weight: bold;
-font-size: 20px;
+font-size: 18px;
 color: #666;
     
 }
@@ -79,6 +80,21 @@ padding: 0;
 }
 .settings .body ul li:nth-child(4){
     background-color: slateblue;
+}
+.settings .body .options span{
+background-color: var(--main-color);
+padding: 5px 20px;
+font-weight: bold;
+border-radius: 8px;
+color: white;
+opacity: .5;
+cursor: pointer;
+}
+.settings .body .options span.active{
+    opacity: 1;
+}
+.settings .body .options span:first-child{
+    margin-right: 10px;
 }
 
 /* end website settings */
@@ -119,6 +135,11 @@ padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.land-page .header .logo span{
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--main-color);
 }
 
 .land-page .header .links {
