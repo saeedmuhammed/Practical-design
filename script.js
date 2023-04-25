@@ -97,3 +97,39 @@ else{
 
 };
 
+// Our Skills Progress
+let skillsSection = document.querySelector(".skills");
+
+window.onscroll=function(){
+//height of the section
+let sectionHeight = skillsSection.offsetTop;
+
+//height of paading and border
+let outerHeight = skillsSection.offsetHeight;
+
+//All height of section borders and padding + body of the section
+let allHeight = sectionHeight + outerHeight;
+
+// height of the window
+let windowHeight = this.innerHeight;
+
+//offset of where do you stop scrolling 
+let windowScroll = this.pageYOffset;
+
+if(windowScroll> sectionHeight + outerHeight - windowHeight){
+let allSkills = document.querySelectorAll(".skills .skill .bar span");
+
+allSkills.forEach((skill)=>{
+
+skill.style.width = skill.dataset.value;
+
+});
+
+
+}
+
+
+
+
+
+};
