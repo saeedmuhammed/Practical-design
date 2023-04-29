@@ -79,13 +79,13 @@ padding: 0;
     background-color: orangered;
 }
 .settings .body ul li:nth-child(2){
-    background-color: darkgreen;
+    background-color: #E91E63;
 }
 .settings .body ul li:nth-child(3){
     background-color:darkblue ;
 }
 .settings .body ul li:nth-child(4){
-    background-color: slateblue;
+    background-color: #009688;
 }
 .settings .body .options span{
 background-color: var(--main-color);
@@ -204,6 +204,8 @@ left: 6px;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
+    text-align: center;
+    width: 95%;
 }
 
 .land-page .body p {
@@ -212,6 +214,18 @@ left: 6px;
 
 .land-page .body h1 {
     font-size: 50px;
+    
+}
+@media (max-width:767px){
+    .land-page .body h1 {
+        font-size: 30px;
+        
+    }
+
+    .land-page .body p {
+        font-size: 15px;
+    }
+
 }
 
 .land-page .body h1 span {
@@ -257,7 +271,7 @@ left: 6px;
 padding-top: 50px;
 padding-bottom: 50px;
 display: flex;
-flex-direction: row-reverse;
+flex-direction: row;
 
 }
 
@@ -281,6 +295,13 @@ font-size: 18px;
     color: var(--main-color);
     font-size: 35px;
 }
+@media (max-width:767px){
+    .about-us{
+        display: block;
+        text-align: center;
+        }
+
+}
 
 /* end About Us */
 /* start Our Skills */
@@ -302,6 +323,13 @@ font-size: 18px;
     margin-bottom: 20px;
     
 }
+@media (max-width:991px){
+    .skills .skill {
+        display: block;
+    }
+
+}
+
 .skills .skill .text {
    
     min-width: 140px;
@@ -309,6 +337,12 @@ font-size: 18px;
     font-size: 18px;
     line-height: 35px;
     text-align: center;
+}
+@media (max-width:991px){
+    .skills .skill .text{
+        line-height: 50px;
+    }
+
 }
 .skill .bar {
     background-color: #eee;
@@ -343,7 +377,7 @@ font-size: 18px;
     text-align: center;
 }
 .gallery .images img {
-    width: 200px;
+    width: 190px;
     margin: 8px;
     padding: 5px;
     background-color: #eee;
@@ -427,15 +461,9 @@ overflow: hidden;
     padding: 5px;
     color: white;
     border-radius: 10px;
-    position: absolute;
-    left: calc(50% - 22.5px);
-    
-}
-.timeline .year {
-    top: 20px;
-}
-.timeline .year-two{
-top: 600px;
+    margin: 20px auto;
+    position: relative;
+    z-index: 2;
 }
 .timeline .right , 
 .timeline .left {
@@ -450,6 +478,15 @@ position: relative;
 }
 .timeline .left {
     float: left;
+}
+@media (max-width:991px){
+ .timeline .right ,
+ .timeline .left{
+    float: none;
+    width: 100%;
+    margin-top: 50px;
+ }
+
 }
 .timeline .left::after ,
 .timeline .right::after{
@@ -525,8 +562,19 @@ top: 20px;
     margin-bottom: 50px;
    
 }
+@media (max-width:991px){
+    .features .box {
+        width: calc(98% / 2);
+    }
+   
+   }
+   @media(max-width :767px){
+    .features .box {
+        width: 100%;
+    }
+   }
 .features .box img {
-    width: 120px;
+    width: 90px;
 }
 .features .box h3 {
     font-weight: bold;
@@ -602,6 +650,26 @@ top: 20px;
     width: calc(88% / 3);
     padding: 20px;
 }
+@media (max-width:1999px){
+    .testimonials .boxes .box {
+        width: calc(80% / 3);
+       
+    }
+}
+@media (max-width:767px){
+    .testimonials .boxes {
+        display: block;
+        width: 90%;
+        
+    }
+    .testimonials .boxes .box  {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .testimonials h1 {
+        text-align: center;
+    }
+}
 .testimonials .box p {
     color: #707070;
     line-height: 1.5;
@@ -612,6 +680,14 @@ top: 20px;
     display: flex;
     justify-content: flex-start;
 
+}
+@media (max-width:991px){
+    .testimonials .box .contact {
+        display: block;
+        text-align: center;
+       
+       
+    }
 }
 .testimonials .box .contact img {
     height: 80px;
@@ -670,6 +746,16 @@ top: 20px;
     width: 48%;
     
 }
+@media (max-width:767px){ 
+    .contact-us form .left,
+    .contact-us form .right
+    {
+        float: none;
+        width: 100%;
+     }
+
+
+}
 
 .contact-us form input:not([type="submit"]) ,
 .contact-us form textarea  {
@@ -708,6 +794,19 @@ background-color: rgba(248, 245, 245, 0.896);
 }
 
 /* end contact us */
+
+
+/* start footer */
+.footer {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+/* end footer */
+
+
 
 /* start media query of container */
 
