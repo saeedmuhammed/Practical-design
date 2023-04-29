@@ -1,12 +1,26 @@
 // show and hide settings menu
 let gear = document.querySelector(".settings .icon");
+let settingsBar = document.querySelector(".settings");
 gear.addEventListener("click", () => {
-    document.querySelector(".settings").classList.toggle("toggle");
+    settingsBar.classList.toggle("toggle");
     document.querySelector(".settings .icon i").classList.toggle("togglei");
     
 });
 
+// hide settings menu when click on any where in the screen
+document.addEventListener("click",(e)=>{
 
+    if(e.target !== gear && e.target!== settingsBar){
+        if(settingsBar.classList.contains("toggle")){
+            settingsBar.classList.toggle("toggle");
+            document.querySelector(".settings .icon i").classList.toggle("togglei");
+        }
+    }
+});
+
+settingsBar.onclick = function(e){
+    e.stopPropagation();
+};
 
 
 //get the main color from local storage
@@ -187,3 +201,30 @@ allLinks.forEach(link=>{
 
 
 });
+
+// toggle menu bars
+let button = document.querySelector(" .header  .menu-bars");
+let tLinks = document.querySelector(".header .links-div");
+
+
+button.onclick = function(e){
+    e.stopPropagation();
+    this.classList.toggle("active");
+    tLinks.classList.toggle("open");
+
+}
+
+// close the menu bars when clicking on any where on the screen
+document.addEventListener("click",(e)=>{
+    if(e.target !== button && e.target!==tLinks){
+        if(tLinks.classList.contains("open")){
+            tLinks.classList.toggle("open");
+            button.classList.toggle("active");
+        }
+    }
+
+});
+
+tLinks.onclick = function (e){
+    e.stopPropagation();
+};

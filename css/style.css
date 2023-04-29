@@ -7,7 +7,6 @@ body {
     
 }
 .container {
-        width: 1170px;
         padding-left: 15px;
         padding-right: 15px;
         margin: auto;
@@ -149,9 +148,37 @@ cursor: pointer;
     color: var(--main-color);
 }
 
+
 .land-page .header .links {
     list-style: none;
     margin-right: 50px;
+}
+
+.land-page .header  .menu-bars{
+    display: none;
+    width: 40px;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    background-color: transparent;
+    position: relative;
+}
+.land-page .header  .menu-bars.active::after{
+content: '';
+position: absolute;
+border-width: 12px;
+border-style: solid;
+border-color: transparent transparent white transparent;
+top: 28px;
+left: 6px;
+
+}
+.land-page .header  .menu-bars span{
+    background-color: white;
+    display: block;
+    height: 7px;
+    margin-bottom: 5px;
+    border-radius: 5px;
 
 }
 
@@ -191,6 +218,38 @@ cursor: pointer;
     color: var(--main-color);
 }
 
+@media (max-width:1052px) {
+    .land-page .header .links-div{
+        display: none;
+    }
+    .land-page .header  .menu-bars {
+        display: block;
+        margin-right: 30px;
+    }
+    .land-page .header .links-div.open .links {
+        padding: 0;
+        width: 90%;
+    }
+    .land-page .header .links-div.open .links li {
+        display: block;
+        margin-bottom: 10px; 
+    }
+    .land-page .header .links-div.open .links li a {
+     
+        color: var(--main-color);
+    }
+    .land-page .header .links-div.open {
+        display: block;
+        background-color: white;
+        position: absolute;
+        right: 30px;
+        top: 60px;
+        width: 40%;
+    }
+    
+
+    
+}
 /* end landing page */
 /* start About Us */
 
@@ -650,6 +709,33 @@ background-color: rgba(248, 245, 245, 0.896);
 
 /* end contact us */
 
+/* start media query of container */
+
+@media (min-width: 576px) { /* Small Devices => Landscape Phones */
+    .container {
+      max-width: 540px;
+    }
+  }
+  @media (min-width: 768px) { /* Medium Devices => Tablets */
+    .container {
+      max-width: 720px;
+    }
+  }
+  @media (min-width: 992px) { /* Desktops */
+    .container {
+      max-width: 960px;
+    }
+  }
+  @media (min-width: 1200px) { /* Large Screens */
+    .container {
+      max-width: 1140px;
+    }
+  }
+
+
+
+
+/* end media query of container */
 
 
 
